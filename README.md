@@ -1,3 +1,12 @@
+# This Is a Fork
+
+This fork of Scawp's still functional auto(un)mounting script makes the following changes:
+- Disables handling NVMe drives
+- Actually unmounts devices when they are disconnected to solve devices disconnected without unmounting first not working until a reboot
+  - This is done because udisks doesn't unmount suddenly disconnected devices, but also won't try to reconnect them once plugged in, _or_ let us remount them since the stale deteministically generated mountpoint would still exist...
+  - The only solution to this issue is to then reboot, letting the OS discard the stale mount
+  - Or just manually run `sudo umount /run/media/deck/<LABEL>` before plugging the device back in
+
 # Steam-Deck.Mount-External-Drive 3.5
 Script to Auto-Mount NTFS, BTRFS & exFat SDCards, External USB Drives (or SSD Docks) & Internal Partitions (If you Dual-Boot) on the Steam Deck
 
