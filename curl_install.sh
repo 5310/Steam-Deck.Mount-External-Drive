@@ -4,7 +4,7 @@
 #Source: https://github.com/5310/Steam-Deck.Mount-External-Drive
 # Use at own Risk!
 
-#curl -sSL https://raw.githubusercontent.com/scawp/Steam-Deck.Mount-External-Drive/main/curl_install.sh | bash
+#curl -sSL https://raw.githubusercontent.com/5310/Steam-Deck.Mount-External-Drive/main/curl_install.sh | bash
 
 #stop running script if anything returns an error (non-zero exit )
 set -e
