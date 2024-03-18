@@ -1,6 +1,6 @@
 # This Is a Fork
 
-> This fork of Scawp's still functional auto(un)mounting script makes the following changes:
+**This fork of Scawp's still functional auto(un)mounting script makes the following changes:**
 
 - Disables handling NVMe drives
 - Actually unmounts devices when they are disconnected to solve devices disconnected without unmounting first not working until a reboot
@@ -73,4 +73,4 @@ a `sudo` password is required (run `passwd` if required first)
 
 This will probably have bugs, so beware! log bugs under [issues](https://github.com/scawp/Steam-Deck.Mount-External-Drive/issues)! 
 
-> Unless it has anything to do with the changes I (@5310) made tothe scripts. In which case add the issues right [here](https://github.com/5310/Steam-Deck.Mount-External-Drive/issues)!
+**Unless it has anything to do with the changes I (@5310) made tothe scripts. In which case add the issues right [here](https://github.com/5310/Steam-Deck.Mount-External-Drive/issues)!**
