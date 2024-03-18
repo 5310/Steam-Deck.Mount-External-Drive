@@ -183,10 +183,15 @@ do_unmount()
     if [[ -n $mount_point ]]; then
         # Remove symlink to the mount point that we're unmounting
         find /run/media -maxdepth 1 -xdev -type l -lname "${mount_point}" -exec rm -- {} \;
+        
+        # Auto-unmount suddenly disconnected devices instead of just keeping the stale mountpoint around
+        # and failing to remount it when plugged back in
+        umount $mount_point
     else
         # If we don't know the mount point then remove all broken symlinks
         find /run/media -maxdepth 1 -xdev -xtype l -exec rm -- {} \;
     fi
+
 }
 
 do_retrigger()
